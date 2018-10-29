@@ -25,7 +25,7 @@ for i in listOfDeletionFiles :
 		os.remove(os.path.join(cwd,i))
 
 for  path in highPath :
-	os.system('aws s3 ls s3://agco-fuse-production-lake/'+path+'/ >'+path+".txt")
+	os.system('aws s3 ls s3://<path>/'+path+'/ >'+path+".txt")
 csv = open(highPath[0]+".txt",'r')
 json = open(highPath[1]+".txt",'r')
 csvLines = csv.readlines()
